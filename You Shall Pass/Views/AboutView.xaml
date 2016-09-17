@@ -43,7 +43,7 @@
                 <HyperlinkButton x:Uid="RateAndReview" Command="{Binding RateCommand, Mode=OneTime}"/>
                 <HyperlinkButton x:Uid="Share" Command="{Binding ShareLinkCommand, Mode=OneTime}"/>
                 <HyperlinkButton x:Uid="FeedbackHub" Command="{Binding GoToFeedbackHubCommand, Mode=OneTime}"/>
-                <HyperlinkButton x:Uid="SourceCodeOnGitHub" Margin="0,0,0,20" NavigateUri="https://github.com/wawan93/you_shall_pass"/>
+                <HyperlinkButton x:Uid="SourceCodeOnGitHub" Margin="0,0,0,20" NavigateUri="https://github.com/Quillaur/YouShallPass"/>
             </StackPanel>
         </ScrollViewer>
 
