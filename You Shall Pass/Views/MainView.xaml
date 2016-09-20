@@ -1,4 +1,4 @@
-﻿<Page
+﻿<toolkit:View
     x:Class="You_Shall_Pass.Views.MainView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,13 +6,13 @@
     xmlns:interactions="using:Microsoft.Xaml.Interactions.Core"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:shell="using:OverToolkit.Shell"
+    xmlns:toolkit="using:OverToolkit.Controls"
     shell:StatusBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
     shell:StatusBar.Foreground="{ThemeResource StatusBarForegroundThemeBrush}"
     shell:TitleBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
     shell:TitleBar.ButtonHoverBackground="{ThemeResource TitleBarButtonHoverBackgroundThemeBrush}"
     shell:TitleBar.ButtonPressedBackground="{ThemeResource TitleBarButtonPressedBackgroundThemeBrush}"
-    DataContext="{Binding Source={StaticResource MainViewModel}}"
-    SizeChanged="Page_SizeChanged">
+    DataContext="{Binding Source={StaticResource MainViewModel}}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -83,4 +83,4 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </Grid>
-</Page>
+</toolkit:View>

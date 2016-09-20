@@ -22,6 +22,16 @@
             </summary>
             <param name="content">Текст, который требуется отобразить в окне.</param>
         </member>
+        <member name="T:OverToolkit.Controls.View">
+            <summary>
+            Представляет расширенную <see cref="T:Windows.UI.Xaml.Controls.Page"/>.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Controls.View.#ctor">
+            <summary>
+            Конструктор по умолчанию.
+            </summary>
+        </member>
         <member name="T:OverToolkit.Enums.DeviceFormFactorType">
             <summary>
             Форм-фактор устройства.
@@ -66,6 +76,26 @@
             <summary>
             Получает форм-фактор используемого пользователем устройства.
             </summary>
+        </member>
+        <member name="T:OverToolkit.Helpers.HttpHelper">
+            <summary>
+            Класс-помощник для работы с HTTP-протоколом.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Helpers.HttpHelper.GetAsync(System.String)">
+            <summary>
+            Отправляет GET-запрос на сервер.
+            </summary>
+            <param name="url">URL запроса.</param>
+            <returns>Ответ с сервера.</returns>
+        </member>
+        <member name="M:OverToolkit.Helpers.HttpHelper.PostAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Отправляет POST-запрос на сервер.
+            </summary>
+            <param name="url">URL запроса.</param>
+            <param name="parameters">Передаваемые данные.</param>
+            <returns>Ответ с сервера.</returns>
         </member>
         <member name="T:OverToolkit.Helpers.LocalizationHelper">
             <summary>
