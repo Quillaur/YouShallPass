@@ -129,6 +129,9 @@
   <data name="ContactUs.Text" xml:space="preserve">
     <value>Contact us</value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Would you like to have very strong passwords which are not unique for different sites and at the same time to remember only one password to rule all of them? You Shall Pass is suitable for you! It is like any other password keeper but there is one small distinction: it doesn't keep anything anywhere! Just in two clicks or taps you may generate unique password based on your master password and sites domain.</value>
+  </data>
   <data name="Development.Text" xml:space="preserve">
     <value>Development</value>
   </data>
