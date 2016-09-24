@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="29192OlegSamoylov.YouShallPass" Publisher="CN=F07F7BB1-5E74-466A-B2B9-BFF403119315" Version="2.3.1.0" />
+  <Identity Name="29192OlegSamoylov.YouShallPass" Publisher="CN=F07F7BB1-5E74-466A-B2B9-BFF403119315" Version="2.3.2.0" />
   <mp:PhoneIdentity PhoneProductId="e07d3ccd-9ad9-4305-9f73-20f0741aa038" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>You Shall Pass</DisplayName>

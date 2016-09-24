@@ -1,8 +1,10 @@
 ﻿using OverToolkit.Enums;
 using OverToolkit.Helpers;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
 using Windows.Phone.UI.Input;
 using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -33,6 +35,11 @@ namespace You_Shall_Pass
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            ApplicationView view = ApplicationView.GetForCurrentView();
+            view.SetPreferredMinSize(new Size(320, 320));
+
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.Auto;
+
             frame = Window.Current.Content as Frame;
 
             if (frame != null)

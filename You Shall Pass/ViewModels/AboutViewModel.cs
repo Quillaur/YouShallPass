@@ -75,7 +75,7 @@ namespace You_Shall_Pass.ViewModels
             }
         }
 
-        public string LastUpdateDate => new DateTime(2016, 9, 20).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
+        public string LastUpdateDate => new DateTime(2016, 9, 24).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
         #endregion
 
         #region Private methods

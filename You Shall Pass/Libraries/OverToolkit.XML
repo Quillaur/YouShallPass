@@ -351,5 +351,80 @@
             <param name="d">Объект зависимостей.</param>
             <param name="e">Данные обработчика события.</param>
         </member>
+        <member name="F:OverToolkit.Shell.TitleBar.ForegroundProperty">
+            <summary>
+            Свойство зависимостей цвета элементов кнопок управления окном.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.GetForeground(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Получает цвет элементов кнопок управления окном.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.SetForeground(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Media.SolidColorBrush)">
+            <summary>
+            Задает цвет элементов кнопок управления окном.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="value">Значение кисти.</param>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.OnForegroundPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Обрабатывает изменение цвета кнопок управления окном.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="e">Данные обработчика события.</param>
+        </member>
+        <member name="F:OverToolkit.Shell.TitleBar.ButtonHoverForegroundProperty">
+            <summary>
+            Свойство зависимостей цвета элементов кнопок управления окном при наведении.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.GetButtonHoverForeground(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Получает цвет элементов кнопок управления окном при наведении.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.SetButtonHoverForeground(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Media.SolidColorBrush)">
+            <summary>
+            Задает цвет элементов кнопок управления окном при наведении.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="value">Значение кисти.</param>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.OnButtonHoverForegroundPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Обрабатывает изменение цвета кнопок управления окном при наведении.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="e">Данные обработчика события.</param>
+        </member>
+        <member name="F:OverToolkit.Shell.TitleBar.ButtonPressedForegroundProperty">
+            <summary>
+            Свойство зависимостей цвета элементов кнопок управления окном при нажатии.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.GetButtonPressedForeground(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Получает цвет элементов кнопок управления окном при нажатии.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.SetButtonPressedForeground(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Media.SolidColorBrush)">
+            <summary>
+            Задает цвет элементов кнопок управления окном при нажатии.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="value">Значение кисти.</param>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.OnButtonPressedForegroundPropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Обрабатывает изменение цвета кнопок управления окном при нажатии.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="e">Данные обработчика события.</param>
+        </member>
     </members>
 </doc>

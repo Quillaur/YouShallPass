@@ -12,6 +12,9 @@
     shell:TitleBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
     shell:TitleBar.ButtonHoverBackground="{ThemeResource TitleBarButtonHoverBackgroundThemeBrush}"
     shell:TitleBar.ButtonPressedBackground="{ThemeResource TitleBarButtonPressedBackgroundThemeBrush}"
+    shell:TitleBar.Foreground="{ThemeResource TitleBarForegroundThemeBrush}"
+    shell:TitleBar.ButtonHoverForeground="{ThemeResource TitleBarForegroundThemeBrush}"
+    shell:TitleBar.ButtonPressedForeground="{ThemeResource TitleBarForegroundThemeBrush}"
     DataContext="{Binding Source={StaticResource MainViewModel}}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
