@@ -25,11 +25,15 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <controls:PageHeader x:Uid="MainViewHeader" Glyph="&#xE192;"/>
+
+        <Border BorderBrush="{ThemeResource PageHeaderBorderThemeBrush}"
+                BorderThickness="1" Grid.ColumnSpan="2" Grid.Row="1"/>
 
         <CommandBar Name="commandArea">
             <AppBarButton x:Uid="Clear" Command="{Binding ClearCommand, Mode=OneTime}" Icon="Clear" IsEnabled="{Binding IsClearEnabled}"/>
@@ -44,7 +48,7 @@
             </CommandBar.SecondaryCommands>
         </CommandBar>
 
-        <ScrollViewer Grid.Row="1" Name="scrollViewerArea">
+        <ScrollViewer Grid.Row="2" Name="scrollViewerArea">
             <StackPanel Name="dataArea" Padding="20,20,20,0">
                 <StackPanel.Transitions>
                     <TransitionCollection>
@@ -80,7 +84,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="commandArea.(Grid.ColumnSpan)" Value="2"/>
-                        <Setter Target="commandArea.(Grid.Row)" Value="2"/>
+                        <Setter Target="commandArea.(Grid.Row)" Value="3"/>
                         <Setter Target="dataArea.Padding" Value="12,20,12,0"/>
                     </VisualState.Setters>
                 </VisualState>

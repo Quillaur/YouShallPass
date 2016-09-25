@@ -19,12 +19,16 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <controls:PageHeader x:Uid="AboutViewHeader" Glyph="&#xE946;"/>
 
-        <ScrollViewer Grid.Row="1">
+        <Border BorderBrush="{ThemeResource PageHeaderBorderThemeBrush}"
+                BorderThickness="1" Grid.Row="1"/>
+
+        <ScrollViewer Grid.Row="2">
             <StackPanel Name="dataArea" Padding="20,20,20,0">
                 <StackPanel.Transitions>
                     <TransitionCollection>
@@ -40,13 +44,19 @@
                 <TextBlock x:Uid="Idea" Style="{ThemeResource TitleTextBlockStyle}"/>
                 <TextBlock x:Uid="VladimirKochergin" Margin="0,0,0,20"/>
                 <TextBlock x:Uid="ContactUs" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0,0,0,5"/>
-                <HyperlinkButton x:Uid="Mail" Command="{Binding SendMailCommand, Mode=OneTime}" Margin="0,0,0,12"/>
+                <HyperlinkButton x:Uid="Mail" Command="{Binding SendMailCommand, Mode=OneTime}" Margin="0,0,0,12"
+                                 Style="{ThemeResource TextBlockButtonStyle}"/>
                 <TextBlock x:Uid="UsefulLinks" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0,0,0,5"/>
-                <HyperlinkButton x:Uid="Website" NavigateUri="http://youshallpass.ru"/>
-                <HyperlinkButton x:Uid="RateAndReview" Command="{Binding RateCommand, Mode=OneTime}"/>
-                <HyperlinkButton x:Uid="Share" Command="{Binding ShareLinkCommand, Mode=OneTime}"/>
-                <HyperlinkButton x:Uid="FeedbackHub" Command="{Binding GoToFeedbackHubCommand, Mode=OneTime}"/>
-                <HyperlinkButton x:Uid="SourceCodeOnGitHub" Margin="0,0,0,20" NavigateUri="https://github.com/Quillaur/YouShallPass"/>
+                <HyperlinkButton x:Uid="Website" NavigateUri="http://youshallpass.ru"
+                                 Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="RateAndReview" Command="{Binding RateCommand, Mode=OneTime}"
+                                 Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="Share" Command="{Binding ShareLinkCommand, Mode=OneTime}"
+                                 Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="FeedbackHub" Command="{Binding GoToFeedbackHubCommand, Mode=OneTime}"
+                                 Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="SourceCodeOnGitHub" Margin="0,0,0,20" NavigateUri="https://github.com/Quillaur/YouShallPass"
+                                 Style="{ThemeResource TextBlockButtonStyle}"/>
             </StackPanel>
         </ScrollViewer>
 

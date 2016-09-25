@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="PageHeaderBorderThemeBrush" Color="Transparent"/>
             <SolidColorBrush x:Key="StatusBarForegroundThemeBrush" Color="#666666"/>
             <SolidColorBrush x:Key="TitleBarBackgroundThemeBrush" Color="#E6E6E6"/>
             <SolidColorBrush x:Key="TitleBarButtonHoverBackgroundThemeBrush" Color="#CFCFCF"/>
@@ -10,25 +11,20 @@
             <SolidColorBrush x:Key="TitleBarForegroundThemeBrush" Color="#070707"/>
         </ResourceDictionary>
         <ResourceDictionary x:Key="Dark">
+            <SolidColorBrush x:Key="PageHeaderBorderThemeBrush" Color="Transparent"/>
             <SolidColorBrush x:Key="StatusBarForegroundThemeBrush" Color="#BFBFBF"/>
             <SolidColorBrush x:Key="TitleBarBackgroundThemeBrush" Color="#1F1F1F"/>
             <SolidColorBrush x:Key="TitleBarButtonHoverBackgroundThemeBrush" Color="#353535"/>
             <SolidColorBrush x:Key="TitleBarButtonPressedBackgroundThemeBrush" Color="#4C4C4C"/>
             <SolidColorBrush x:Key="TitleBarForegroundThemeBrush" Color="#F8F8F8"/>
         </ResourceDictionary>
-        <ResourceDictionary x:Key="HighContrastWhite">
-            <SolidColorBrush x:Key="StatusBarForegroundThemeBrush" Color="Black"/>
-            <SolidColorBrush x:Key="TitleBarBackgroundThemeBrush" Color="White"/>
-            <SolidColorBrush x:Key="TitleBarButtonHoverBackgroundThemeBrush" Color="White"/>
-            <SolidColorBrush x:Key="TitleBarButtonPressedBackgroundThemeBrush" Color="White"/>
-            <SolidColorBrush x:Key="TitleBarForegroundThemeBrush" Color="Black"/>
-        </ResourceDictionary>
-        <ResourceDictionary x:Key="HighContrastBlack">
-            <SolidColorBrush x:Key="StatusBarForegroundThemeBrush" Color="White"/>
-            <SolidColorBrush x:Key="TitleBarBackgroundThemeBrush" Color="Black"/>
-            <SolidColorBrush x:Key="TitleBarButtonHoverBackgroundThemeBrush" Color="Black"/>
-            <SolidColorBrush x:Key="TitleBarButtonPressedBackgroundThemeBrush" Color="Black"/>
-            <SolidColorBrush x:Key="TitleBarForegroundThemeBrush" Color="White"/>
+        <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="PageHeaderBorderThemeBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+            <SolidColorBrush x:Key="StatusBarForegroundThemeBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+            <SolidColorBrush x:Key="TitleBarBackgroundThemeBrush" Color="{ThemeResource SystemColorWindowColor}"/>
+            <SolidColorBrush x:Key="TitleBarButtonHoverBackgroundThemeBrush" Color="{ThemeResource SystemColorWindowColor}"/>
+            <SolidColorBrush x:Key="TitleBarButtonPressedBackgroundThemeBrush" Color="{ThemeResource SystemColorWindowColor}"/>
+            <SolidColorBrush x:Key="TitleBarForegroundThemeBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
