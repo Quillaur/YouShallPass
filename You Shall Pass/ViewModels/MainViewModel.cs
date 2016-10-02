@@ -101,7 +101,7 @@ namespace You_Shall_Pass.ViewModels
             if (WebsiteURL.IndexOf("www.") == 0)
                 simplifiedURL = WebsiteURL.Substring(4);
 
-            string salt = MasterPassword + simplifiedURL + MasterPassword;
+            string salt = MasterPassword + simplifiedURL.ToLower() + MasterPassword;
             string alphabet = UseAdditionalCharacters ? extendedAlphabet : simplifiedAlphabet;
 
             int integer, j, i, v, p;
