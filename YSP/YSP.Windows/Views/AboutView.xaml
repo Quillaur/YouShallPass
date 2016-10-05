@@ -1,0 +1,42 @@
+﻿<SettingsFlyout
+    x:Class="YSP.Views.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="ms-appx:///Assets/SmallLogo.png"
+    x:Uid="AboutViewHeader"
+    d:DesignWidth="346"
+    DataContext="{Binding Source={StaticResource AboutViewModel}}">
+
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="{StaticResource AppName}"/>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding Version}" TextWrapping="Wrap"/>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="{Binding LastUpdateDate}" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock x:Uid="Development" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBlock x:Uid="OlegSamoylov" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock x:Uid="Idea" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBlock x:Uid="VladimirKochergin" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock x:Uid="ContactUs" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,10"/>
+            <HyperlinkButton Command="{Binding SendMailCommand, Mode=OneTime}" Content="{Binding Mail, Mode=OneTime}" Padding="-4,6,0,6"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock x:Uid="UsefulLinks" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,10"/>
+            <HyperlinkButton Content="{Binding Website, Mode=OneTime}" NavigateUri="http://youshallpass.ru" Padding="-4,6,0,6"/>
+            <HyperlinkButton Command="{Binding ShareLinkCommand, Mode=OneTime}" Content="{Binding Share, Mode=OneTime}" Padding="-4,6,0,6"/>
+            <HyperlinkButton Content="{Binding SourceCodeOnGitHub, Mode=OneTime}" NavigateUri="https://github.com/Quillaur/YouShallPass" Padding="-4,6,0,6"/>
+        </StackPanel>
+    </StackPanel>
+</SettingsFlyout>

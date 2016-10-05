@@ -1,23 +1,21 @@
-﻿using Microsoft.Services.Store.Engagement;
-using OverToolkit.Helpers;
+﻿using OverToolkit.Helpers;
 using OverToolkit.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.ApplicationModel.Store;
+using Windows.Foundation;
 using Windows.System;
+using YSP.Enums;
 
-namespace You_Shall_Pass.ViewModels
+namespace YSP.ViewModels
 {
     public class AboutViewModel : BindableBase
     {
         #region Constructor
-        public AboutViewModel()
-        {
-            DataTransferManager dataTransferManager = DataTransferManager.GetForCurrentView();
-            dataTransferManager.DataRequested += DataTransferManager_DataRequested;
-        }
+        public AboutViewModel() { }
         #endregion
 
         #region Commands
@@ -49,36 +47,46 @@ namespace You_Shall_Pass.ViewModels
 
         public DelegateCommand RateCommand => new DelegateCommand(async () =>
         {
-            await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:REVIEW?PFN=" + Package.Current.Id.FamilyName));
+#if WINDOWS_APP
+            await Launcher.LaunchUriAsync(new Uri($@"ms-windows-store:REVIEW?PFN={Package.Current.Id}"));
+#else
+            await Launcher.LaunchUriAsync(new Uri($@"ms-windows-store:reviewapp?appid={CurrentApp.AppId}"));
+#endif
         });
 
         public DelegateCommand ShareLinkCommand => new DelegateCommand(() =>
         {
             DataTransferManager.ShowShareUI();
         });
+#endregion
 
-        public DelegateCommand GoToFeedbackHubCommand => new DelegateCommand(async () =>
-        {
-            await StoreServicesFeedbackLauncher.GetDefault().LaunchAsync();
-        });
-        #endregion
-
-        #region Properties
-        public bool IsFeedbackHyperlinkVisible => StoreServicesFeedbackLauncher.IsSupported();
-
+#region Properties
         public string Version
         {
             get
             {
+                DataTransferManager dataTransferManager = DataTransferManager.GetForCurrentView();
+                dataTransferManager.DataRequested += new TypedEventHandler<DataTransferManager, DataRequestedEventArgs>(DataTransferManager_DataRequested);
+
                 PackageVersion version = Package.Current.Id.Version;
                 return $"{LocalizationHelper.ToString("Version")} {version.Major}.{version.Minor}.{version.Build}";
             }
         }
 
         public string LastUpdateDate => new DateTime(2016, 10, 5).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
-        #endregion
 
-        #region Private methods
+        public string Mail => LocalizationHelper.ToString(nameof(Mail), TextTransform.Lowercase);
+
+        public string Website => LocalizationHelper.ToString(nameof(Website), TextTransform.Lowercase);
+
+        public string RateAndReview => LocalizationHelper.ToString(nameof(RateAndReview), TextTransform.Lowercase);
+
+        public string Share => LocalizationHelper.ToString(nameof(Share), TextTransform.Lowercase);
+
+        public string SourceCodeOnGitHub => LocalizationHelper.ToString(nameof(SourceCodeOnGitHub), TextTransform.Lowercase);
+#endregion
+
+#region Private methods
         private void DataTransferManager_DataRequested(DataTransferManager sender, DataRequestedEventArgs args)
         {
             DataRequest request = args.Request;
@@ -86,6 +94,6 @@ namespace You_Shall_Pass.ViewModels
             request.Data.Properties.Title = "You Shall Pass";
             request.Data.Properties.Description = LocalizationHelper.ToString("ShareDescription");
         }
-        #endregion
+#endregion
     }
 }

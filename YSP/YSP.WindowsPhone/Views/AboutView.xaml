@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="YSP.Views.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding Source={StaticResource AboutViewModel}}">
+
+    <Grid>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="{StaticResource AppNameUpper}" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock x:Uid="AboutView" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Margin="19,9.5,19,0">
+                <StackPanel.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </StackPanel.Transitions>
+
+                <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}" Text="{StaticResource AppName}"/>
+                <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Text="{Binding Version, Mode=OneTime}"/>
+                <TextBlock Style="{ThemeResource BodyTextBlockStyle}" Text="{Binding LastUpdateDate, Mode=OneTime}" Margin="0,0,0,20"/>
+                <TextBlock x:Uid="Development" Style="{ThemeResource GroupHeaderTextBlockStyle}"/>
+                <TextBlock x:Uid="OlegSamoylov" Margin="0,0,0,20" Style="{ThemeResource BodyTextBlockStyle}"/>
+                <TextBlock x:Uid="Idea" Style="{ThemeResource GroupHeaderTextBlockStyle}"/>
+                <TextBlock x:Uid="VladimirKochergin" Margin="0,0,0,20" Style="{ThemeResource BodyTextBlockStyle}"/>
+                <TextBlock x:Uid="ContactUs" Style="{ThemeResource GroupHeaderTextBlockStyle}" Margin="0,0,0,5"/>
+                <HyperlinkButton Command="{Binding SendMailCommand, Mode=OneTime}" Content="{Binding Mail, Mode=OneTime}" Margin="0,0,0,12"/>
+                <TextBlock x:Uid="UsefulLinks" Margin="0,0,0,5" Style="{ThemeResource GroupHeaderTextBlockStyle}"/>
+                <HyperlinkButton Content="{Binding Website, Mode=OneTime}" NavigateUri="http://youshallpass.ru"/>
+                <HyperlinkButton Command="{Binding RateCommand, Mode=OneTime}" Content="{Binding RateAndReview, Mode=OneTime}"/>
+                <HyperlinkButton Command="{Binding ShareLinkCommand, Mode=OneTime}" Content="{Binding Share, Mode=OneTime}"/>
+                <HyperlinkButton Content="{Binding SourceCodeOnGitHub, Mode=OneTime}" Margin="0,0,0,20" NavigateUri="https://github.com/Quillaur/YouShallPass"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
