@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="f21844f6-473a-4b94-8b6e-8d20cfd427dd" Publisher="CN=quill" Version="1.1.0.0" />
+  <Identity Name="29192OlegSamoylov.YouShallPass" Publisher="CN=F07F7BB1-5E74-466A-B2B9-BFF403119315" Version="1.1.0.0" />
   <Properties>
     <DisplayName>You Shall Pass</DisplayName>
     <PublisherDisplayName>Oleg Samoylov</PublisherDisplayName>
