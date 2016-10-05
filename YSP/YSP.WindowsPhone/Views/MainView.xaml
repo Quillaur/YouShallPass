@@ -47,8 +47,10 @@
                 </StackPanel.Transitions>
 
                 <TextBox x:Uid="WebsiteBox" IsSpellCheckEnabled="False" InputScope="Url" Margin="0,0,0,20"
-                         Text="{Binding WebsiteURL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <PasswordBox x:Uid="MasterPassword" IsPasswordRevealButtonEnabled="True" Password="{Binding MasterPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                         Text="{Binding WebsiteURL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Name="websiteBox"/>
+                <PasswordBox x:Uid="MasterPassword" IsPasswordRevealButtonEnabled="True" Password="{Binding MasterPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             Name="passwordBox"/>
                 <TextBox x:Uid="Password" IsReadOnly="True" Margin="0,0,0,20" Text="{Binding GeneratedPassword}"/>
                 <CheckBox Content="!@#$%^&amp;*([{_+~-}])" IsChecked="{Binding UseAdditionalCharacters, Mode=TwoWay}" Margin="0,0,0,12"/>
                 <Slider x:Uid="Length" Margin="0,0,0,20" Maximum="64" Minimum="8" Value="{Binding Length, Mode=TwoWay}"/>

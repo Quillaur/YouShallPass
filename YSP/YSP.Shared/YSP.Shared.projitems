@@ -23,6 +23,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Mvvm\IChangedCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
