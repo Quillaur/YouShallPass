@@ -221,6 +221,28 @@
             Представляет панель состояния для мобильных устройств.
             </summary>
         </member>
+        <member name="F:OverToolkit.Shell.StatusBar.IsVisibleProperty">
+            <summary>
+            Свойство зависимостей видимости панели состояния.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.StatusBar.GetIsVisible(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Получает значение видимости панели состояния.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.StatusBar.SetIsVisible(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+            <summary>
+            Задает значение видимости панели состояния.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.StatusBar.IsVisiblePropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Обрабатывает изменение видимости панели состояния.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="e">Данные обработчика события.</param>
+        </member>
         <member name="F:OverToolkit.Shell.StatusBar.BackgroundProperty">
             <summary>
             Свойство зависимостей фонового цвета панели состояния.
@@ -275,6 +297,28 @@
             <summary>
             Представляет панель заголовка окна.
             </summary>
+        </member>
+        <member name="F:OverToolkit.Shell.TitleBar.IsVisibleProperty">
+            <summary>
+            Свойство зависимостей видимости панели заголовка окна.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.GetIsVisible(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Получает значение видимости панели заголовка окна.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.SetIsVisible(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+            <summary>
+            Задает значение видимости панели заголовка окна.
+            </summary>
+        </member>
+        <member name="M:OverToolkit.Shell.TitleBar.IsVisiblePropertyChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Обрабатывает изменение видимости панели заголовка окна.
+            </summary>
+            <param name="d">Объект зависимостей.</param>
+            <param name="e">Данные обработчика события.</param>
         </member>
         <member name="F:OverToolkit.Shell.TitleBar.BackgroundProperty">
             <summary>

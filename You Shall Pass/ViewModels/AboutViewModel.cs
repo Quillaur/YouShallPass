@@ -2,7 +2,6 @@
 using OverToolkit.Helpers;
 using OverToolkit.Mvvm;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
@@ -24,27 +23,9 @@ namespace You_Shall_Pass.ViewModels
         public DelegateCommand SendMailCommand => new DelegateCommand(async () =>
         {
             PackageVersion version = Package.Current.Id.Version;
+            string mailto = $"mailto:";
 
-            Dictionary<string, string> mailtoPairs = new Dictionary<string, string>();
-            mailtoPairs.Add("to", "quillaur@outlook.com");
-            mailtoPairs.Add("subject", $"You Shall Pass {version.Major}.{ version.Minor}.{version.Build}");
-
-            string mailto = "mailto:";
-            byte iterator = 0;
-            foreach (KeyValuePair<string, string> pair in mailtoPairs)
-            {
-                if (iterator == 0)
-                    mailto += '?';
-
-                mailto += $"{pair.Key}={pair.Value}&";
-
-                if (iterator + 1 == mailtoPairs.Count)
-                    mailto.Remove(mailto.Length - 1);
-
-                iterator++;
-            }
-
-            await Launcher.LaunchUriAsync(new Uri(mailto));
+            await Launcher.LaunchUriAsync(new Uri($"{mailto}quillaur@outlook.com?subject=You Shall Pass {version.Major}.{version.Minor}.{version.Build}"));
         });
 
         public DelegateCommand RateCommand => new DelegateCommand(async () =>
@@ -75,7 +56,7 @@ namespace You_Shall_Pass.ViewModels
             }
         }
 
-        public string LastUpdateDate => new DateTime(2016, 10, 5).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
+        public string LastUpdateDate => new DateTime(2016, 10, 8).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
         #endregion
 
         #region Private methods
