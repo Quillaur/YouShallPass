@@ -120,7 +120,7 @@
   <data name="About.Label" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="AboutViewHeader.Title" xml:space="preserve">
+  <data name="AboutView.Header" xml:space="preserve">
     <value>About</value>
   </data>
   <data name="Clear.Label" xml:space="preserve">
@@ -147,7 +147,7 @@
   <data name="Mail.Content" xml:space="preserve">
     <value>Mail</value>
   </data>
-  <data name="MainViewHeader.Title" xml:space="preserve">
+  <data name="MainView.Header" xml:space="preserve">
     <value>Password generator</value>
   </data>
   <data name="MasterPassword.Header" xml:space="preserve">

@@ -7,6 +7,7 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:shell="using:OverToolkit.Shell"
     xmlns:toolkit="using:OverToolkit.Controls"
+    shell:TitleBar.IsVisible="False"
     shell:StatusBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
     shell:StatusBar.Foreground="{ThemeResource StatusBarForegroundThemeBrush}"
     shell:TitleBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
@@ -20,20 +21,22 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <controls:PageHeader x:Uid="MainViewHeader" Glyph="&#xE192;"/>
-
-        <Border BorderBrush="{ThemeResource PageHeaderBorderThemeBrush}"
-                BorderThickness="1" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <controls:TitleBar x:Uid="MainView"
+                           Background="{ThemeResource TitleBarBackgroundThemeBrush}"
+                           Glyph="&#xE192;"
+                           Grid.ColumnSpan="2"
+                           IsBackButtonVisible="False"
+                           Title="{StaticResource AppName}" />
 
         <CommandBar Name="commandArea">
             <AppBarButton x:Uid="Clear" Command="{Binding ClearCommand, Mode=OneTime}" Icon="Clear" IsEnabled="{Binding IsClearEnabled}"/>
@@ -77,6 +80,7 @@
                     <VisualState.Setters>
                         <Setter Target="commandArea.(Grid.Column)" Value="1"/>
                         <Setter Target="commandArea.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="commandArea.Margin" Value="0,32,0,0" />
                         <Setter Target="dataArea.Padding" Value="20,20,20,0"/>
                         <Setter Target="scrollViewerArea.(Grid.ColumnSpan)" Value="2"/>
                     </VisualState.Setters>

@@ -48,16 +48,12 @@ namespace You_Shall_Pass
             Window.Current.Content = frame;
             frame.Navigate(typeof(MainView));
 
-            frame.Navigated += OnNavigated;
-
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
             if (DeviceTypeHelper.GetDeviceFormFactorType() == DeviceFormFactorType.Phone)
                 HardwareButtons.BackPressed += OnBackPressed;
 
             if (!e.PrelaunchActivated)
                 Window.Current.Activate();
-
-            UpdateBackButtonVisibility();
         }
 
         private void OnBackPressed(object sender, BackPressedEventArgs e)
@@ -74,17 +70,6 @@ namespace You_Shall_Pass
                 return;
             e.Handled = true;
             frame.GoBack();
-        }
-
-        private void OnNavigated(object sender, NavigationEventArgs e)
-        {
-            UpdateBackButtonVisibility();
-        }
-
-        private void UpdateBackButtonVisibility()
-        {
-            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = frame.CanGoBack ? AppViewBackButtonVisibility.Visible :
-                AppViewBackButtonVisibility.Collapsed;
         }
     }
 }

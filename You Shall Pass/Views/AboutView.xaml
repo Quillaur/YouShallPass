@@ -5,7 +5,7 @@
     xmlns:controls="using:You_Shall_Pass.Controls"
     xmlns:shell="using:OverToolkit.Shell"
     xmlns:toolkit="using:OverToolkit.Controls"
-    xmlns:viewModels="using:You_Shall_Pass.ViewModels"
+    shell:TitleBar.IsVisible="False"
     shell:StatusBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
     shell:StatusBar.Foreground="{ThemeResource StatusBarForegroundThemeBrush}"
     shell:TitleBar.Background="{ThemeResource TitleBarBackgroundThemeBrush}"
@@ -23,10 +23,12 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <controls:PageHeader x:Uid="AboutViewHeader" Glyph="&#xE946;"/>
-
-        <Border BorderBrush="{ThemeResource PageHeaderBorderThemeBrush}"
-                BorderThickness="1" Grid.Row="1"/>
+        <controls:TitleBar x:Uid="AboutView"
+                           BackButtonClick="TitleBar_BackButtonClick"
+                           Background="{ThemeResource TitleBarBackgroundThemeBrush}"
+                           Glyph="&#xE192;"
+                           Grid.ColumnSpan="2"
+                           Title="{StaticResource AppName}" />
 
         <ScrollViewer Grid.Row="2">
             <StackPanel Name="dataArea" Padding="20,20,20,0">
