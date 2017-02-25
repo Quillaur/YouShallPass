@@ -1,5 +1,6 @@
 ﻿using Windows.ApplicationModel;
 using Windows.ApplicationModel.Core;
+using Windows.System.Profile;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -32,7 +33,7 @@ namespace You_Shall_Pass.Controls
         public bool IsBackButtonVisible
         {
             get { return (bool)GetValue(IsBackButtonVisibleProperty); }
-            set { SetValue(IsBackButtonVisibleProperty, value); }
+            set {  SetValue(IsBackButtonVisibleProperty, value); }
         }
 
         public string Title
@@ -107,6 +108,12 @@ namespace You_Shall_Pass.Controls
                 UpdateExtendIntoTitleBar();
                 UpdateBackButtonVisibility();
 
+                if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
+                {
+                    ExtendIntoTitleBar = false;
+                    title.Visibility = backButton.Visibility = leftMask.Visibility = rightMask.Visibility = Visibility.Collapsed;
+                }
+
                 backButton.Click += (sender, e) => OnBackButtonClicked();
 
                 coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -136,15 +143,11 @@ namespace You_Shall_Pass.Controls
 
             if (sender.IsVisible)
             {
-                backButton.Visibility = Visibility.Visible;
-                placeholder.Height = 80;
-                backgroundElement.Height = 80;
+                title.Visibility = backButton.Visibility = leftMask.Visibility = rightMask.Visibility = Visibility.Collapsed;
             }
             else
             {
-                backButton.Visibility = Visibility.Collapsed;
-                placeholder.Height = 44;
-                backgroundElement.Height = 44;
+                title.Visibility = backButton.Visibility = leftMask.Visibility = rightMask.Visibility = Visibility.Visible;
             }
         }
 
