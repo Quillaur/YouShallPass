@@ -57,8 +57,12 @@
                                  Style="{ThemeResource TextBlockButtonStyle}"/>
                 <HyperlinkButton x:Uid="FeedbackHub" Command="{Binding GoToFeedbackHubCommand, Mode=OneTime}"
                                  Style="{ThemeResource TextBlockButtonStyle}"/>
-                <HyperlinkButton x:Uid="SourceCodeOnGitHub" Margin="0,0,0,20" NavigateUri="https://github.com/Quillaur/YouShallPass"
+                <HyperlinkButton x:Uid="SourceCodeOnGitHub" NavigateUri="https://github.com/Quillaur/YouShallPass"
                                  Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="ShowMyApps"
+                                 Margin="0,0,0,20"
+                                 Command="{Binding ShowMyAppsCommand, Mode=OneTime}"
+                                 Style="{ThemeResource TextBlockButtonStyle}" />
             </StackPanel>
         </ScrollViewer>
 

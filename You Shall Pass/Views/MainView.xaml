@@ -40,6 +40,10 @@
 
         <CommandBar Name="commandArea">
             <AppBarButton x:Uid="Clear" Command="{Binding ClearCommand, Mode=OneTime}" Icon="Clear" IsEnabled="{Binding IsClearEnabled}"/>
+            <AppBarButton x:Uid="Copy"
+                          Command="{Binding CopyCommand, Mode=OneTime}"
+                          Icon="Copy"
+                          IsEnabled="{Binding IsClearEnabled}" />
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Uid="About">
                     <interactivity:Interaction.Behaviors>

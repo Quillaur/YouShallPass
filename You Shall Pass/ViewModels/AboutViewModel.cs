@@ -38,6 +38,11 @@ namespace You_Shall_Pass.ViewModels
             DataTransferManager.ShowShareUI();
         });
 
+        public DelegateCommand ShowMyAppsCommand => new DelegateCommand(async () =>
+        {
+            await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store://publisher/?name=Oleg Samoylov"));
+        });
+
         public DelegateCommand GoToFeedbackHubCommand => new DelegateCommand(async () =>
         {
             await StoreServicesFeedbackLauncher.GetDefault().LaunchAsync();
@@ -52,11 +57,11 @@ namespace You_Shall_Pass.ViewModels
             get
             {
                 PackageVersion version = Package.Current.Id.Version;
-                return $"{LocalizationHelper.ToString("Version")} {version.Major}.{version.Minor}.{version.Build}";
+                return $"{ LocalizationHelper.ToString("Version")} {version.Major}.{version.Minor}.{version.Build}";
             }
         }
 
-        public string LastUpdateDate => new DateTime(2017, 2, 25).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
+        public string LastUpdateDate => new DateTime(2017, 3, 9).ToString(DateTimeFormatInfo.CurrentInfo.ShortDatePattern);
         #endregion
 
         #region Private methods

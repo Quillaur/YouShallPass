@@ -1,4 +1,5 @@
 ﻿using OverToolkit.Mvvm;
+using Windows.ApplicationModel.DataTransfer;
 
 namespace You_Shall_Pass.ViewModels
 {
@@ -22,6 +23,17 @@ namespace You_Shall_Pass.ViewModels
         {
             ClearCommand = new DelegateCommand(() => WebsiteURL = MasterPassword = GeneratedPassword = string.Empty);
 
+            CopyCommand = new DelegateCommand(() =>
+            {
+                var dataPackage = new DataPackage()
+                {
+                    RequestedOperation = DataPackageOperation.Copy
+                };
+
+                dataPackage.SetText(GeneratedPassword);
+                Clipboard.SetContent(dataPackage);
+            });
+
             UseAdditionalCharacters = true;
             Length = 15;
         }
@@ -29,6 +41,8 @@ namespace You_Shall_Pass.ViewModels
 
         #region Commands
         public DelegateCommand ClearCommand { get; private set; }
+
+        public DelegateCommand CopyCommand { get; private set; }
         #endregion
 
         #region Properties

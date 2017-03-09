@@ -129,6 +129,9 @@
   <data name="ContactUs.Text" xml:space="preserve">
     <value>Связаться с нами</value>
   </data>
+  <data name="Copy.Label" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Хотите ли Вы иметь криптостойкие пароли, различные для разных сайтов, и при этом помнить всего только один пароль, чтобы иметь доступ ко всем остальным? Попробуйте You Shall Pass! Приложение похоже на любой другой хранитель паролей, но имеет лишь одно небольшое отличие: оно нигде ничего не хранит! Теперь не придется запоминать кучу паролей и тем более куда-то их записывать! Вы можете запомнить только один мастер-пароль и использовать его для генерации пароля для каждого сайта!</value>
   </data>
@@ -168,6 +171,9 @@
   <data name="ShareDescription" xml:space="preserve">
     <value>Ссылка на You Shall Pass в Магазине</value>
   </data>
+  <data name="ShowMyApps.Content" xml:space="preserve">
+    <value>Другие мои приложения</value>
+  </data>
   <data name="SourceCodeOnGitHub.Content" xml:space="preserve">
     <value>Исходный код на GitHub</value>
   </data>
@@ -184,6 +190,6 @@
     <value>Веб-сайт</value>
   </data>
   <data name="WebsiteBox.Header" xml:space="preserve">
-    <value>Веб-сайт</value>
+    <value>Веб-сайт или email</value>
   </data>
 </root>
